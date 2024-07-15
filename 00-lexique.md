@@ -61,3 +61,54 @@ vendor/ # Contient les dépendances de l'application
 ## 3. Controller
 
 Les contrôleurs interprètent les requêtes HTTP effectuées via l'URL et renvoient les informations demandées par l'utilisateur à Twig, qui est la Vue.
+
+## 4. Twig
+
+Twig est un moteur de templates, il permet de générer des pages HTML en lien avec les contrôleurs, les entités et les types. Il offre des fonctionnalités telles que les conditions, les boucles, les inclusions, les extensions, les appels de méthodes, les appels de propriétés, les appels de variables, les appels de fonctions, etc.
+
+## 5. Doctrine
+
+Doctrine est un ORM (Object Relational Mapper) pour PHP. Il permet de manipuler des objets PHP qui représentent des données stockées dans une base de données. Par exemple, si vous avez une table Produit dans votre base de données, Doctrine va vous permettre de manipuler les produits de cette table sous forme d'objets PHP. Doctrine est installé par défaut dans Symfony. Ainsi, tout ce qui est en lien avec la base de données pour la création, la modification, la suppression appelle des classes de Doctrine et des méthodes de ces classes.
+
+## 6. Entity
+
+Les entités représentent une table de la base de données, chacune des propriétés de l'entité représentant un champ de la table avec toutes les spécifications de ce champ. Ainsi, les entités sont directement liées à Doctrine. C'est ici que l'on définit les contraintes telles que le fait qu'elles ne soient pas nulles, qu'elles aient un minimum ou un maximum de caractères, le type, et la gestion des messages renvoyés si non respectées.
+
+## 7. Repository
+
+Les repositories représentent les requêtes de SELECT affiliées aux entités. Ils permettent ainsi de récupérer chaque insertion en BDD, grâce à des méthodes `find()`, `findAll()`, `findBy()`...
+
+## 8. Type ou FormType
+
+Les types ou FormTypes génèrent des formulaires en lien avec une entité, chaque propriété de l'entité représentant un input généré par le type. On peut y définir les contraintes aussi, mais ils servent surtout à personnaliser les inputs pour gérer le type d'input, les labels, et les attributs (placeholder, class, id, ...).
+
+## 9. YAML
+
+YAML permet de configurer des fichiers de configuration, comme le fichier `routes.yaml` qui permet de configurer les routes, ou le fichier `security.yaml` qui permet de configurer la sécurité de l'application.
+
+## 10. Service
+
+Un service est un objet qui effectue une tâche spécifique et qui est généralement disponible de manière globale dans toute l'application. Par exemple, l'objet `Doctrine\ORM\EntityManager` est un service qui permet d'effectuer des opérations sur la base de données. Les services sont généralement définis et configurés dans un fichier YAML.
+
+## 11. Commande
+
+Une commande est une classe PHP qui permet d'ajouter des fonctionnalités à la console Symfony. Par exemple, on peut créer une commande pour envoyer un email à tous les utilisateurs d'une application. Les commandes sont généralement définies dans le répertoire `src/Command`.
+
+## 12. Fixtures
+
+Les fixtures sont des classes PHP qui permettent de peupler la base de données avec des données de test. Par exemple, on peut créer des fixtures pour ajouter des utilisateurs, des produits, des catégories, etc. Les fixtures sont généralement définies dans le répertoire `src/DataFixtures`.
+
+## 13. Event
+
+Un événement est un objet qui représente un événement déclenché par une action dans l'application. Par exemple, on peut créer un événement pour envoyer un email à un utilisateur lorsqu'il s'inscrit sur le site. Les événements sont généralement définis dans le répertoire `src/Event`.
+
+## Références
+
+-   [Symfony](https://symfony.com/)
+-   [Documentation Symfony](https://symfony.com/doc/current/index.html)
+-   [Twig](https://twig.symfony.com/)
+-   [Doctrine](https://www.doctrine-project.org/)
+
+---
+
+[Haut de page](#)
