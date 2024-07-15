@@ -38,7 +38,7 @@ Pour travailler efficacement avec Symfony, il est recommandé d'installer les ex
 -   [PHP Namespace Resolver (Mehedi Hassan)](https://marketplace.visualstudio.com/items?itemName=MehediDracula.php-namespace-resolver)
 -   [PHP Getters & Setters (phproberto)](https://marketplace.visualstudio.com/items?itemName=phproberto.vscode-php-getters-setters)
 -   [PHP Doc Generator (Ron van der Heijden)](https://marketplace.visualstudio.com/items?itemName=ronvanderheijden.phpdoc-generator)
--   [Symfony for VSCode (The Symfony Team)](https://marketplace.visualstudio.com/items?itemName=TheNouillet.symfony-vscode)
+-   [Symfony for VSCode (TheNouillet)](https://marketplace.visualstudio.com/items?itemName=TheNouillet.symfony-vscode)
 -   [Twig Language 2 (mblode)](https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2)
 
 ## 2. Paramètres VS Code
