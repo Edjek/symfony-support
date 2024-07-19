@@ -1,5 +1,13 @@
 # Fixtures
 
+<br>
+
+<center>
+<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
+</center>
+
+<br>
+
 > Pour peupler la base de données avec des données de test, Symfony propose un outil appelé les fixtures. Les fixtures sont des classes PHP qui permettent de générer des données de test pour les entités de l'application.
 
 ## Sommaire

@@ -1,5 +1,13 @@
 # Controller (MVC)
 
+<br>
+
+<center>
+<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
+</center>
+
+<br>
+
 > Les contrôleurs interprètent les requêtes HTTP effectuées via l'URL et renvoient les informations demandées par l'utilisateur à Twig, qui est la Vue.
 
 ## Sommaire
