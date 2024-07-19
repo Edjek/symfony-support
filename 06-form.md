@@ -168,6 +168,17 @@ Twig permet de personnaliser l'affichage du formulaire en utilisant des thèmes.
 {{ form_end(form) }}
 ```
 
+## Configuration du thème
+
+Après avoir ajouter Bootstrap Css à votre projet, vous pouvez configurer le thème du formulaire pour qu'il utilise Bootstrap ou Tailwind CSS.
+
+Configurez Bootstrap ou Tailwind CSS pour les formulaires dans le fichier `config/packages/twig.yaml` :
+
+```yaml
+twig:
+    form_themes: ['bootstrap_5_layout.html.twig']
+```
+
 ## Validation
 
 La validation des données du formulaire se fait automatiquement grâce aux contraintes de validation définies dans les entités.
