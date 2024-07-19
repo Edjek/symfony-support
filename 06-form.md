@@ -1,4 +1,6 @@
-# AbstractTypes
+# Formulaires Symfony
+
+> Les formulaires sont un élément essentiel de toute application web. Ils permettent aux utilisateurs d'interagir avec l'application en saisissant des données et en soumettant des requêtes. Symfony propose un composant de formulaire puissant qui facilite la création et la gestion de formulaires dans vos applications.
 
 ## Sommaire
 
@@ -195,4 +197,4 @@ Les AbstractTypes sont des classes abstraites qui permettent de définir des for
 
 ---
 
-[Retour au sommaire](#)
+[🏠 Retour au sommaire](#)

@@ -1,5 +1,17 @@
 # Controller (MVC)
 
+> Les contrôleurs interprètent les requêtes HTTP effectuées via l'URL et renvoient les informations demandées par l'utilisateur à Twig, qui est la Vue.
+
+## Sommaire
+
+-   [Controller (MVC)](#controller-mvc)
+    -   [Sommaire](#sommaire)
+    -   [Introduction](#introduction)
+    -   [Route](#route)
+    -   [Return](#return)
+    -   [Variables](#variables)
+    -   [Route dynamique](#route-dynamique)
+
 ## Introduction
 
 -   Les contrôleurs sont des classes qui contiennent des méthodes qui correspondent à des routes.
@@ -61,3 +73,7 @@ public function article($id)
     ]);
 }
 ```
+
+---
+
+[🏠 Retour au sommaire](#)

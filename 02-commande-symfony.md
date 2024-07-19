@@ -1,12 +1,6 @@
 # Commandes Symfony
 
-<br>
-
-<center>
-<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
-</center>
-
-<br>
+> Symfony fourni de nombreuses commandes pour gérer votre application. Nous pouvons les exécuter en utilisant la commande `php bin/console` ou `symfony console`. Voici quelques commandes utiles pour travailler avec Symfony.
 
 ## Sommaire
 

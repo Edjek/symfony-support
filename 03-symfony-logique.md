@@ -1,12 +1,6 @@
 # Logique de Symfony
 
-<br>
-
-<center>
-<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
-</center>
-
-<br>
+> Vue d'ensemble de la logique de Symfony, y compris la création de contrôleurs, la gestion des bases de données, la création de formulaires, etc.
 
 ## Sommaire
 
@@ -260,4 +254,6 @@ Pour les formulaires, utilisez la fonction `form_start()` :
 {{ form_start(form) }}
 ```
 
-[Haut de page](#)
+---
+
+[🏠 Retour au sommaire](#)
