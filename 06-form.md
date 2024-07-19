@@ -92,21 +92,19 @@ Voici une liste des principaux paramètres que l'on peut passer dans le tableau 
 
 4. `data`: Définit la valeur par défaut du champ
 
-5. `mapped`: Indique si le champ doit être lié à une propriété de l'objet sous-jacent
+5. `empty_data`: Définit la valeur à utiliser si le champ est vide
+6.
+7. `mapped`: Indique si le champ doit être lié à une propriété de l'objet sous-jacent
 
-6. `constraints`: Permet d'ajouter des contraintes de validation spécifiques au champ (ex: `new NotBlank()`)
+8. `constraints`: Permet d'ajouter des contraintes de validation spécifiques au champ (ex: `new NotBlank()`)
 
-7. `placeholder`: Ajoute une option vide au début de la liste pour les champs de type choix
+9. `placeholder`: Ajoute une option vide au début de la liste pour les champs de type choix
 
-8. `expanded`: Pour les champs de type choix, affiche les options sous forme de boutons radio ou cases à cocher
+10. `expanded`: Pour les champs de type choix, affiche les options sous forme de boutons radio ou cases à cocher
 
-9. `disabled`: Désactive le champ
+11. `disabled`: Désactive le champ
 
-10. `help`: Ajoute un texte d'aide sous le champ
-
-11. `row_attr`: Permet d'ajouter des attributs HTML à la ligne du formulaire contenant le champ
-
-12. `empty_data`: Définit la valeur à utiliser si le champ est vide
+12. `help`: Ajoute un texte d'aide sous le champ
 
 13. `invalid_message`: Personnalise le message d'erreur en cas de validation échouée
 
