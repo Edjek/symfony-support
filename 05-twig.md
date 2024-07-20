@@ -127,4 +127,12 @@ Twig est un moteur de template puissant qui facilite la création de vues dynami
 
 ---
 
+**🔗 Liens Utiles :**
+
+-   [Documentation officielle de Twig](https://twig.symfony.com/doc/3.x/)
+-   [Symfony avec Twig](https://symfony.com/doc/current/templating.html)
+-   [Comment Customiser les formulaires avec Twig](https://symfony.com/doc/current/form/form_customization.html)
+
+---
+
 [🏠 Retour au sommaire](#)
