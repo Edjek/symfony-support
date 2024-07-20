@@ -1,13 +1,5 @@
 # Environnement de Travail Symfony
 
-<br>
-
-<center>
-<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
-</center>
-
-<br>
-
 > Afin de travailler efficacement avec Symfony, il est recommandé de configurer votre environnement de travail pour une productivité maximale. Voici quelques outils et extensions utiles pour développer des applications Symfony dans Visual Studio Code.
 
 ## Sommaire

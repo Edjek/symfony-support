@@ -1,13 +1,5 @@
 # Formulaires Symfony
 
-<br>
-
-<center>
-<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
-</center>
-
-<br>
-
 > Les formulaires sont un élément essentiel de toute application web. Ils permettent aux utilisateurs d'interagir avec l'application en saisissant des données et en soumettant des requêtes. Symfony propose un composant de formulaire puissant qui facilite la création et la gestion de formulaires dans vos applications.
 
 ## Sommaire
