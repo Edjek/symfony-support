@@ -1,5 +1,13 @@
 # Symfony Authentication Guide
 
+<br>
+
+<center>
+<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
+</center>
+
+<br>
+
 Ce guide vous explique comment configurer l'authentification dans une application Symfony.
 
 ## 1. Vérification de la Sécurité

@@ -1,5 +1,13 @@
 # Twig
 
+<br>
+
+<center>
+<img src="https://symfony.com/logos/symfony_black_03.png" width="100">
+</center>
+
+<br>
+
 > Twig est un moteur de template pour PHP. Il est utilisé pour générer des pages HTML dynamiques à partir de modèles. Symfony utilise Twig par défaut pour les vues.
 
 ## Sommaire
