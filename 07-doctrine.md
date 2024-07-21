@@ -12,16 +12,15 @@
 
 ## Sommaire
 
-- [Doctrine ORM](#doctrine-orm)
-  - [Sommaire](#sommaire)
-  - [Introduction](#introduction)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Entités](#entités)
-  - [Repository](#repository)
-  - [Query Builder](#query-builder)
-  - [Migration](#migration)
-
+-   [Doctrine ORM](#doctrine-orm)
+    -   [Sommaire](#sommaire)
+    -   [Introduction](#introduction)
+    -   [Installation](#installation)
+    -   [Configuration](#configuration)
+    -   [Entités](#entités)
+    -   [Repository](#repository)
+    -   [Query Builder](#query-builder)
+    -   [Migration](#migration)
 
 ## Introduction
 
@@ -133,8 +132,11 @@ use App\Entity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
-// Le repository doit hériter de la classe ServiceEntityRepository, cela permet d'utiliser les méthodes de base de données de Doctrine ORM
-// find() findBy(), findOneBy(), findAll(), etc.
+// Le repository doit hériter de la classe ServiceEntityRepository, cela permet d'utiliser les méthodes de base de données de Doctrine ORM :
+// find()
+// findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+// findOneBy(array $criteria, array $orderBy = null)
+// findAll()
 class ProductRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -178,6 +180,7 @@ Pour exécuter la migration, exécutez la commande suivante :
 ```bash
 php bin/console doctrine:migrations:migrate
 ```
+
 ---
 
 **🔗 Liens Utiles :**
