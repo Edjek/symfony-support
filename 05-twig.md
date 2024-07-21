@@ -68,7 +68,7 @@ Vous pouvez également utiliser des structures de contrôle comme les boucles `f
 Et un exemple de condition `if` :
 
 ```twig
-{% if is_logged_in %}
+{% if is_granted('IS_AUTHENTICATED') %}
     <p>Welcome, {{ user.name }}!</p>
 {% else %}
     <p>Please log in to continue.</p>
@@ -109,14 +109,28 @@ L'objet `app` vous permet d'accéder à l'application Symfony dans vos modèles 
 
 Par exemple, pour accéder à un paramètre dans un modèle Twig, utilisez :
 
+-   Pour accéder à la requête actuelle :
+
 ```twig
-{{ app.parameter_name }}
+{{ app.request}}
 ```
 
-Pour accéder à un service dans un modèle Twig, utilisez :
+-   Pour accéder à l'utilisateur actuel :
 
 ```twig
-{{ app.service_name.method() }}
+{{ app.user }}
+```
+
+-   Pour accéder à la session actuelle :
+
+```twig
+{{ app.session }}
+```
+
+-   Pour acceder à la Session Flash :
+
+```twig
+{{ app.flashes }}
 ```
 
 Twig offre de nombreuses fonctionnalités pour rendre vos modèles plus dynamiques et interactifs. Consultez la [documentation officielle de Twig](https://twig.symfony.com/doc/3.x/) pour en savoir plus sur ses fonctionnalités et sa syntaxe.
