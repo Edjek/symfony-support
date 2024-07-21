@@ -34,14 +34,16 @@ composer require twig
 
 Twig utilise des balises pour afficher des variables, des structures de contrôle et des filtres. Voici quelques exemples de syntaxe Twig :
 
--   Commentaire : `{# Commentaire #}`
--   Héritage : `{% extends 'base.html.twig' %}`
--   Bloc : `{% block content %} ... {% endblock %}`
--   Inclure un fichier : `{% include 'file.html.twig' %}`
--   Structure de contrôle `for` : `{% for item in items %} ... {% endfor %}`
--   Structure de contrôle `if` : `{% if condition %} ... {% endif %}`
--   Afficher une variable : `{{ variable }}`
--   Filtre : `{{ variable|filter }}`
+-   Balises de commentaire : `{# Commentaire #}`
+-   Les structures de contrôle :
+    -   Héritage : `{% extends 'base.html.twig' %}`
+    -   Bloc : `{% block content %} ... {% endblock %}`
+    -   Inclure un fichier : `{% include 'file.html.twig' %}`
+    -   Structure de contrôle `for` : `{% for item in items %} ... {% endfor %}`
+    -   Structure de contrôle `if` : `{% if condition %} ... {% endif %}`
+-   Affichage des variables :
+    -   Afficher une variable : `{{ variable }}`
+    -   Filtre : `{{ variable|filter }}`
 
 ## Utilisation
 
