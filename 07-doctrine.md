@@ -12,6 +12,17 @@
 
 ## Sommaire
 
+- [Doctrine ORM](#doctrine-orm)
+  - [Sommaire](#sommaire)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Entités](#entités)
+  - [Repository](#repository)
+  - [Query Builder](#query-builder)
+  - [Migration](#migration)
+
+
 ## Introduction
 
 Doctrine va vous permettre de manipuler des objets PHP comme s'ils étaient des lignes de base de données. Vous n'aurez plus à écrire des requêtes SQL pour récupérer ou modifier des données dans la base de données.
@@ -29,7 +40,7 @@ composer require doctrine
 Pour configurer Doctrine, vous devez ajouter les informations de connexion à la base de données dans le fichier `.env` :
 
 ```env
-# .env
+# .env.local
 DATABASE_URL=mysql://db_user:db_password@db_host:db_port/db_name
 ```
 
@@ -153,6 +164,8 @@ public function findAllProducts(float $price): array
 ```
 
 ## Migration
+
+Les migrations permettent de mettre à jour la base de données en fonction des modifications apportées aux entités.
 
 Pour créer une migration, exécutez la commande suivante :
 
