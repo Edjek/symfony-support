@@ -12,8 +12,12 @@
 
 ## Sommaire
 
+-   [Introduction](#introduction)
 -   [Installation](#installation)
 -   [Création des fixtures](#création-des-fixtures)
+-   [Références : Passage de données entre fixtures](#références--passage-de-données-entre-fixtures)
+-   [Dependencies : Dépendances entre fixtures](#dependencies--dépendances-entre-fixtures)
+-   [Ordre d'exécution : Ordre d'exécution des fixtures](#ordre-dexécution--ordre-dexécution-des-fixtures)
 -   [Chargement des fixtures](#chargement-des-fixtures)
 -   [Faker](#faker)
 -   [Conclusion](#conclusion)
@@ -54,6 +58,110 @@ class AppFixtures extends Fixture
         }
 
         $manager->flush();
+    }
+}
+```
+
+## Références : Passage de données entre fixtures
+
+Pour passer des données entre les fixtures, il faut utiliser la méthode `addReference` pour créer une référence et `getReference` pour récupérer une référence à une fixture existante :
+
+```php
+<?php
+
+namespace App\DataFixtures;
+
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+
+class ProductFixtures extends Fixture
+{
+    public function load(ObjectManager $manager)
+    {
+        $product = new Product();
+        $product->setName('Product 1');
+        $product->setPrice(10);
+        $manager->persist($product);
+        $manager->flush();
+
+        $this->addReference('product', $product);
+    }
+}
+```
+
+```php
+<?php
+
+namespace App\DataFixtures;
+
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+
+class AutreFixtures extends Fixture
+{
+    public function load(ObjectManager $manager)
+    {
+        $product = $this->getReference('product');
+    }
+}
+```
+
+Cette méthode est utile pour créer des relations entre les entités. Par exemple, pour créer un produit avec une catégorie :
+
+## Dependencies : Dépendances entre fixtures
+
+Pour définir des dépendances entre les fixtures, il faut implémenter la méthode `getDependencies` :
+
+```php
+<?php
+
+namespace App\DataFixtures;
+
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+
+class AutreFixtures extends Fixture implements DependentFixtureInterface
+{
+    public function load(ObjectManager $manager)
+    {
+        $product = $this->getReference('product');
+    }
+
+    public function getDependencies()
+    {
+        return [
+            ProductFixtures::class,
+        ];
+    }
+}
+```
+
+## Ordre d'exécution : Ordre d'exécution des fixtures
+
+Par défaut, les fixtures sont exécutées dans l'ordre alphabétique.
+
+Pour définir l'ordre d'exécution des fixtures, il faut implémenter la méthode `getOrder` :
+
+```php
+<?php
+
+namespace App\DataFixtures;
+
+use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
+
+class AutreFixtures extends Fixture implements OrderedFixtureInterface
+{
+    public function load(ObjectManager $manager)
+    {
+        $product = $this->getReference('product');
+    }
+
+    public function getOrder()
+    {
+        return 1;
     }
 }
 ```
