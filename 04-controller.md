@@ -82,6 +82,28 @@ public function article($id)
 }
 ```
 
+## ParamConverter
+
+-   Le ParamConverter est un mécanisme qui permet de convertir automatiquement un paramètre de route en objet.
+-   Le ParamConverter est activé par défaut dans Symfony.
+
+```php
+#[Route("/article/{id}", name="article")]
+public function article(Article $article)
+{
+    return $this->render('article/article.html.twig', [
+        'article' => $article
+    ]);
+}
+```
+
+Pour pouvoir utiliser le ParamConverter avec les autres champs que l'`id`, par exemple le slug, il faut configurer dans le fichier `config/packages/doctrine.yaml`
+
+```yaml
+controller_resolver:
+    auto_mapping: true:
+```
+
 ---
 
 [🏠 Retour au sommaire](#)
