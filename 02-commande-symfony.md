@@ -89,7 +89,8 @@ symfony open:local
 Arrêtez le serveur local :
 
 ```bash
-DATABASE_URL="mysql://user:password@host:port/database_name"
+symfony server:stop
+symfony serve:stop
 ```
 
 ## 3. .env
