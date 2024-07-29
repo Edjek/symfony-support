@@ -116,9 +116,9 @@ Voici une liste des principaux paramètres que l'on peut passer dans le tableau 
 
 Ces options permettent de personnaliser le comportement et l'apparence des champs de formulaire en Symfony, offrant une grande flexibilité dans la création de formulaires.
 
-## Utilisation de l'AbstractType
+## Utilisation d'un FormType
 
-Pour utiliser un AbstractType, il suffit de l'instancier dans le contrôleur et de l'ajouter à la méthode `createForm`.
+Pour utiliser un FormType, il suffit de passer son nom à la méthode `createForm`.
 
 ```php
 <?php
