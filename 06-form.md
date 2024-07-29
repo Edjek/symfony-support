@@ -82,9 +82,7 @@ class ArticleType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Article, // Classe de l'objet à lier
-            'csrf_protection' => true, // Protection CSRF
-            'attr' => ['class' => 'form-horizontal'], // Classe CSS
+            'data_class' => Article::class, // Classe de l'objet à lier
         ]);
     }
 }
