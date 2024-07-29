@@ -110,7 +110,7 @@ Cette méthode est utile pour créer des relations entre les entités. Par exemp
 
 ## Dependencies : Dépendances entre fixtures
 
-Pour définir des dépendances entre les fixtures, il faut implémenter la méthode `getDependencies` :
+Pour définir des dépendances entre les fixtures, il faut implémenter `DependentFixtureInterface` et créer la méthode `getDependencies` :
 
 ```php
 <?php
