@@ -71,6 +71,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
+// Nous pouvons ajouter des méthodes de cycle de vie pour mettre à jour les dates de création et de mise à jour, en utilisant les annotations ORM
 #[ORM\HasLifecycleCallbacks]
 // Nous pouvons préciser que certaines propriétés de l'entité sont UNIQUE
 #[UniqueEntity(fields: ['name'])]
@@ -96,6 +97,7 @@ class Product
     #[ORM\Column(type: 'datetime_immutable')]
     private \DateTimeImmutable $updatedAt;
 
+    // Nous pouvons ajouter des méthodes de cycle de vie pour mettre à jour les dates de création et de mise à jour
     #[PrePersist]
     public function setCreatedAtValue(): void
     {
