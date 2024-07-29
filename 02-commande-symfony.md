@@ -65,19 +65,13 @@ symfony server:ca:install
 Lancez le serveur local avec Symfony CLI :
 
 ```bash
-symfony server:start
-```
-
-ou
-
-```bash
 symfony serve
 ```
 
 Lancez le serveur local en arrière-plan (détaché) :
 
 ```bash
-symfony server:start -d
+symfony server -d
 ```
 
 Lancer le navigateur par défaut avec le serveur local :
@@ -89,7 +83,6 @@ symfony open:local
 Arrêtez le serveur local :
 
 ```bash
-symfony server:stop
 symfony serve:stop
 ```
 
