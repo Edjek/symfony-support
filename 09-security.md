@@ -12,22 +12,25 @@
 
 ## Sommaire
 
--   [1. Vérification de la Sécurité](#1-vérification-de-la-sécurité)
--   [2. Création d'un Utilisateur](#2-création-dun-utilisateur)
+-   [Introduction](#introduction)
+-   [Vérification de la Sécurité](#vérification-de-la-sécurité)
+-   [Création d'un Utilisateur](#création-dun-utilisateur)
     -   [Explication](#explication)
--   [3. Configuration du Fichier de Sécurité](#3-configuration-du-fichier-de-sécurité)
--   [4. Création d'un Formulaire d'Inscription](#4-création-dun-formulaire-dinscription)
+-   [Configuration du Fichier de Sécurité](#configuration-du-fichier-de-sécurité)
+-   [Création d'un Formulaire d'Inscription](#création-dun-formulaire-dinscription)
     -   [Explication](#explication-1)
--   [5. Création d'un Formulaire de Connexion](#5-création-dun-formulaire-de-connexion)
+-   [Création d'un Formulaire de Connexion](#création-dun-formulaire-de-connexion)
     -   [Explication](#explication-2)
--   [6. Test des Routes de Sécurité](#6-test-des-routes-de-sécurité)
--   [7. Ajout de Rôles et de Permissions](#7-ajout-de-rôles-et-de-permissions)
+-   [Test des Routes de Sécurité](#test-des-routes-de-sécurité)
+-   [Ajout de Rôles et de Permissions](#ajout-de-rôles-et-de-permissions)
     -   [Modification des Permissions](#modification-des-permissions)
--   [8. Personnalisation des Formulaires et Vues](#8-personnalisation-des-formulaires-et-vues)
--   [9. Générer les droits d'accès sur les contrôleurs](#9-générer-les-droits-daccès-sur-les-contrôleurs)
     -   [Explication](#explication-3)
--   [10. Personnalisation des Messages](#10-personnalisation-des-messages)
+-   [Personnalisation des Formulaires et Vues](#personnalisation-des-formulaires-et-vues)
     -   [Explication](#explication-4)
+-   [9. Générer les droits d'accès sur les contrôleurs](#9-générer-les-droits-daccès-sur-les-contrôleurs)
+    -   [Explication](#explication-5)
+-   [Personnalisation des Messages](#personnalisation-des-messages)
+    -   [Explication](#explication-6)
 -   [Conclusion](#conclusion)
 
 ## Introduction
@@ -52,7 +55,7 @@ symfony console make:user
 
 ### Explication
 
-Cette commande vous posera des questions pour configurer l'entité utilisateur, comme le nom de la classe et les champs nécessaires (e.g., `email`, `password`). Par défaut, elle créera une classe `User` dans le répertoire `src/Entity`. Cette classe implémentera l'interface `UserInterface` de Symfony pour gérer l'authentification.
+Cette commande vous posera des questions pour configurer l'entité utilisateur, comme le nom de la classe et les champs nécessaires (e.g., `email`, `password`). Par défaut, elle créera une classe `User` dans le répertoire `src/Entity`. Cette classe implémentera l'interface `UserInterface` et `PasswordAuthenticatedUserInterface` de Symfony pour gérer l'authentification.
 
 ## Configuration du Fichier de Sécurité
 
@@ -70,6 +73,11 @@ symfony console make:registration-form
 
 Cette commande crée un formulaire d'inscription, un contrôleur, et met à jour l'entité `User` pour gérer l'inscription. Elle ajoute également une route `/register`.
 Mettre à jour la base de données pour ajouter les champs de l'utilisateur nouvellement créés.
+
+```bash
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+```
 
 ## Création d'un Formulaire de Connexion
 
@@ -93,20 +101,20 @@ Vérifiez que les routes de connexion, déconnexion et inscription fonctionnent 
 
 ## Ajout de Rôles et de Permissions
 
-Pour ajouter des rôles à vos utilisateurs, modifiez l'entité `User` :
+Pour ajouter des rôles à vos utilisateurs, modifiez l'entité `User` (cela est fait automatiquement lors de la création de l'utilisateur) :
 
 ```php
 class User implements UserInterface
 {
     // ...
 
-    #[ORM\Column(type: 'json')]
+    #[ORM\Column]
     private array $roles = [];
 
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
+        // guarantie que chaque utilisateur a au moins un rôle
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
@@ -132,9 +140,21 @@ security:
         - { path: ^/profile, roles: ROLE_USER }
 ```
 
+### Explication
+
+Dans cet exemple, les utilisateurs avec le rôle `ROLE_ADMIN` auront accès à la route `/admin`, tandis que les utilisateurs avec le rôle `ROLE_USER` auront accès à la route `/profile`. Vous pouvez personnaliser les rôles et les permissions selon vos besoins.
+
 ## Personnalisation des Formulaires et Vues
 
 Personnalisez les templates dans le répertoire `templates` pour correspondre à votre design.
+
+```twig
+{% if is_granted('ROLE_ADMIN') %}
+    <a href="{{ path('admin_dashboard') }}">Dashboard</a>
+{% endif %}
+```
+
+Dans un fichier `twig` vous pouvez utiliser la fonction `is_granted` pour vérifier les droits d'accès :
 
 ```twig
 {% extends 'base.html.twig' %}
@@ -150,6 +170,13 @@ Personnalisez les templates dans le répertoire `templates` pour correspondre à
 {% endblock %}
 ```
 
+### Explication
+
+Dans cet exemple, le template `login.html.twig` affiche un message de bienvenue si l'utilisateur est connecté.
+
+Pour acceder aux informations de l'utilisateur connecté, vous pouvez utiliser `app.user`.
+Vous pouvez personnaliser les vues pour afficher des messages d'erreur, des formulaires de connexion, etc...
+
 ## 9. Générer les droits d'accès sur les contrôleurs
 
 Pour restreindre l'accès à certaines parties de votre application, vous pouvez ajouter des annotations de sécurité aux contrôleurs :
@@ -162,7 +189,7 @@ class AdminController extends AbstractController
     #[IsGranted('ROLE_ADMIN')]
     public function dashboard(): Response
     {
-        // ...
+        // Il est possible d'ajouter des restrictions d'accès via les attributs de la méthode ou en utilisant la méthode denyAccessUnlessGranted
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
     }
 }
