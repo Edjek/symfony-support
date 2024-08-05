@@ -1,4 +1,4 @@
-# Symfony Security Guide
+# Symfony Security Guide : Authentification et Connexion dans une application Symfony
 
 <br>
 

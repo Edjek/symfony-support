@@ -1,4 +1,4 @@
-# Logique de Symfony
+# Logique de Symfony : Vue d'ensemble
 
 <br>
 

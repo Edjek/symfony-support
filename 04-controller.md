@@ -1,4 +1,4 @@
-# Controller (MVC)
+# Controller : Gestion des Requêtes HTTP avec Symfony
 
 <br>
 

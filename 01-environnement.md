@@ -1,4 +1,4 @@
-# Environnement de Travail Symfony
+# Environnement de Travail Symfony avec Visual Studio Code
 
 <br>
 

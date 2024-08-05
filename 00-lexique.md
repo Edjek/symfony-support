@@ -1,4 +1,4 @@
-# Symfony
+# Lexique de Symfony 7 et de ses concepts
 
 <br>
 
