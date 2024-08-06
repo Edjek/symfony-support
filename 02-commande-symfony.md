@@ -1,4 +1,4 @@
-# Les commandes Symfony : Gérer votre application Symfony avec la console
+# 🚀 **[Symfony](https://symfony.com/)** | Commandes de base : Gérer votre application Symfony avec la console
 
 <br>
 
@@ -8,7 +8,7 @@
 
 <br>
 
-> Symfony fourni de nombreuses commandes pour gérer votre application. Nous pouvons les exécuter en utilisant la commande `php bin/console` ou `symfony console`. Voici quelques commandes utiles pour travailler avec Symfony.
+> 🚀 **[Symfony](https://symfony.com/)** fourni de nombreuses commandes pour gérer votre application. Nous pouvons les exécuter en utilisant la commande `php bin/console` ou `symfony console`. Voici quelques commandes utiles pour travailler avec Symfony.
 
 ## Sommaire
 

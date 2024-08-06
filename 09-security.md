@@ -1,4 +1,4 @@
-# Symfony Security Guide : Authentification et Connexion dans une application Symfony
+# 🚀 **[Symfony](https://symfony.com/)** | Security Guide : Authentification et Connexion
 
 <br>
 
