@@ -15,22 +15,15 @@
 -   [Introduction](#introduction)
 -   [Vérification de la Sécurité](#vérification-de-la-sécurité)
 -   [Création d'un Utilisateur](#création-dun-utilisateur)
-    -   [Explication](#explication)
 -   [Configuration du Fichier de Sécurité](#configuration-du-fichier-de-sécurité)
 -   [Création d'un Formulaire d'Inscription](#création-dun-formulaire-dinscription)
-    -   [Explication](#explication-1)
 -   [Création d'un Formulaire de Connexion](#création-dun-formulaire-de-connexion)
-    -   [Explication](#explication-2)
 -   [Test des Routes de Sécurité](#test-des-routes-de-sécurité)
 -   [Ajout de Rôles et de Permissions](#ajout-de-rôles-et-de-permissions)
     -   [Modification des Permissions](#modification-des-permissions)
-    -   [Explication](#explication-3)
 -   [Personnalisation des Formulaires et Vues](#personnalisation-des-formulaires-et-vues)
-    -   [Explication](#explication-4)
 -   [9. Générer les droits d'accès sur les contrôleurs](#9-générer-les-droits-daccès-sur-les-contrôleurs)
-    -   [Explication](#explication-5)
 -   [Personnalisation des Messages](#personnalisation-des-messages)
-    -   [Explication](#explication-6)
 -   [Conclusion](#conclusion)
 
 ## Introduction
@@ -53,8 +46,6 @@ Créez une entité utilisateur avec Symfony. Cela configurera également le syst
 symfony console make:user
 ```
 
-### Explication
-
 Cette commande vous posera des questions pour configurer l'entité utilisateur, comme le nom de la classe et les champs nécessaires (e.g., `email`, `password`). Par défaut, elle créera une classe `User` dans le répertoire `src/Entity`. Cette classe implémentera l'interface `UserInterface` et `PasswordAuthenticatedUserInterface` de Symfony pour gérer l'authentification.
 
 ## Configuration du Fichier de Sécurité
@@ -68,8 +59,6 @@ Générez un formulaire d'inscription pour permettre aux utilisateurs de créer 
 ```bash
 symfony console make:registration-form
 ```
-
-### Explication
 
 Cette commande crée un formulaire d'inscription, un contrôleur, et met à jour l'entité `User` pour gérer l'inscription. Elle ajoute également une route `/register`.
 Mettre à jour la base de données pour ajouter les champs de l'utilisateur nouvellement créés.
@@ -86,8 +75,6 @@ Générez un formulaire de connexion et configurez votre système de sécurité 
 ```bash
 symfony console make:security:form-login
 ```
-
-### Explication
 
 Cette commande crée un contrôleur de connexion et les templates associés, ainsi que les routes nécessaires. Par défaut, elle configurera les routes `/login` et `/logout`.
 
@@ -140,8 +127,6 @@ security:
         - { path: ^/profile, roles: ROLE_USER }
 ```
 
-### Explication
-
 Dans cet exemple, les utilisateurs avec le rôle `ROLE_ADMIN` auront accès à la route `/admin`, tandis que les utilisateurs avec le rôle `ROLE_USER` auront accès à la route `/profile`. Vous pouvez personnaliser les rôles et les permissions selon vos besoins.
 
 ## Personnalisation des Formulaires et Vues
@@ -170,8 +155,6 @@ Dans un fichier `twig` vous pouvez utiliser la fonction `is_granted` pour vérif
 {% endblock %}
 ```
 
-### Explication
-
 Dans cet exemple, le template `login.html.twig` affiche un message de bienvenue si l'utilisateur est connecté.
 
 Pour acceder aux informations de l'utilisateur connecté, vous pouvez utiliser `app.user`.
@@ -195,8 +178,6 @@ class AdminController extends AbstractController
 }
 ```
 
-### Explication
-
 Dans cet exemple, la méthode `dashboard` du contrôleur `AdminController` nécessite le rôle `ROLE_ADMIN` pour y accéder. Si un utilisateur n'a pas ce rôle, il sera redirigé vers la page de connexion. Vous pouvez également utiliser :
 
 -   `#[IsGranted('ROLE_USER')]`,
@@ -213,8 +194,6 @@ Invalid credentials: 'Identifiants invalides.'
 You have been logged in: 'Vous êtes connecté.'
 You have been logged out: 'Vous êtes déconnecté.'
 ```
-
-### Explication
 
 Cela permet de personnaliser les messages affichés lors de la connexion, de la déconnexion et en cas d'erreur d'authentification.
 
