@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Doctrine ORM : Manipuler des objets PHP comme s'ils étaient des lignes de base de données
+# 🚀 [Symfony](https://symfony.com/) | Doctrine ORM : Manipuler des objets PHP comme s'ils étaient des lignes de base de données
 
 <br>
 
@@ -8,25 +8,25 @@
 
 <br>
 
+Par **Rachid EDJEKOUANE ⭐️**
+
 > Doctrine ORM est un ORM (Object-Relational Mapping) pour PHP qui fournit une solution de persistance pour les applications PHP. Il fournit des fonctionnalités de mapping objet-relationnel puissantes et flexibles pour les applications PHP.
 
 ## Sommaire
 
--   [Doctrine ORM](#doctrine-orm)
-    -   [Sommaire](#sommaire)
-    -   [Introduction](#introduction)
-    -   [Installation](#installation)
-    -   [Configuration](#configuration)
-    -   [Entités](#entités)
-    -   [Repository](#repository)
-    -   [Query Builder](#query-builder)
-    -   [Migration](#migration)
+-   [1. Introduction](#1-introduction)
+-   [2. Installation](#2-installation)
+-   [3. Configuration](#3-configuration)
+-   [4. Entités](#4-entités)
+-   [5. Repository](#5-repository)
+-   [6. Query Builder](#6-query-builder)
+-   [7. Migration](#7-migration)
 
-## Introduction
+### 1. Introduction
 
 Doctrine va vous permettre de manipuler des objets PHP comme s'ils étaient des lignes de base de données. Vous n'aurez plus à écrire des requêtes SQL pour récupérer ou modifier des données dans la base de données.
 
-## Installation
+### 2. Installation
 
 Pour installer Doctrine, exécutez la commande suivante :
 
@@ -34,7 +34,7 @@ Pour installer Doctrine, exécutez la commande suivante :
 composer require doctrine
 ```
 
-## Configuration
+### 3. Configuration
 
 Pour configurer Doctrine, vous devez ajouter les informations de connexion à la base de données dans le fichier `.env` :
 
@@ -54,7 +54,7 @@ doctrine:
             auto_mapping: true
 ```
 
-## Entités
+### 4. Entités
 
 Une entité est une classe PHP qui correspond à une table dans la base de données. Voici un exemple d'entité `Product` :
 
@@ -114,7 +114,7 @@ class Product
     // ...
 ```
 
-## Repository
+### 5. Repository
 
 Un repository est une classe qui permet de récupérer des entités à partir de la base de données. Voici un exemple de repository `ProductRepository` :
 
@@ -141,7 +141,7 @@ class ProductRepository extends ServiceEntityRepository
 }
 ```
 
-## Query Builder
+### 6. Query Builder
 
 Le Query Builder est une classe qui permet de construire des requêtes SQL de manière programmatique, les `Repository` heritent de la méthodes `createQueryBuilder()`. Voici un exemple de requête SQL pour récupérer tous les produits :
 
@@ -160,7 +160,7 @@ public function findAllProducts(float $price): array
 }
 ```
 
-## Migration
+### 7. Migration
 
 Les migrations permettent de mettre à jour la base de données en fonction des modifications apportées aux entités.
 

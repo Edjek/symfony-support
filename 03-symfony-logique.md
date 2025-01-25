@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Logique : Vue d'ensemble
+# 🚀 [Symfony](https://symfony.com/) | Logique : Vue d'ensemble
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > Vue d'ensemble de la logique de Symfony, y compris la création de contrôleurs, la gestion des bases de données, la création de formulaires, etc.
 
@@ -24,7 +26,7 @@
 -   [10. Suppression (DELETE)](#10-suppression-delete)
 -   [11. Assets (CSS, JS, Images)](#11-assets-css-js-images)
 
-## 1. Création d'un Contrôleur et d'une Vue
+### 1. Création d'un Contrôleur et d'une Vue
 
 Pour commencer, créez votre template de base dans `base.html.twig` en incluant la navigation, le block `body`, les liens CSS, les scripts, etc.
 
@@ -65,7 +67,7 @@ return $this->render('nomducontrollerenminuscule/nomdufichiertwig.html.twig', [
 
 À gauche de `=>` se trouve le nom de la variable que vous utiliserez dans le Twig, à droite se trouve le nom de la variable dans la méthode qui contient les informations de `title`.
 
-## 2. Création de la Base de Données
+### 2. Création de la Base de Données
 
 Pour commencer à travailler avec une base de données, vous devez configurer le fichier `.env` avec les informations de connexion à la base de données.
 
@@ -104,7 +106,7 @@ php bin/console doctrine:schema:update --force
 
 Ensuite, effectuez des contrôles sur les propriétés des entités. Consultez les `Assert` et les `Constraints` dans la documentation Symfony.
 
-## 3. Créez un formulaire Symfony :
+### 3. Créez un formulaire Symfony :
 
 ```bash
 php bin/console make:form nom_formulaire
@@ -116,7 +118,7 @@ Ajoutez un bouton de soumission, soit en utilisant `SubmitType` soit en le créa
 
 Créez une méthode dans le contrôleur pour générer l'affichage de ce formulaire.
 
-## 4. Manipulation des Données
+### 4. Manipulation des Données
 
 Lorsque vous souhaitez récupérer des données de la superglobale (`$_GET`, `$_POST`), injectez en dépendance `Request $request` de `HttpFoundation`.
 
@@ -126,7 +128,7 @@ Pour récupérer des données provenant de la base de données, appelez le repos
 
 Pour modifier, insérer ou supprimer en base de données, appelez `EntityManagerInterface $manager`.
 
-## 5. Affichage et Modification des Données
+### 5. Affichage et Modification des Données
 
 Pour afficher des données provenant de la base de données, vous devez accéder au repository correspondant à votre entité.
 
@@ -139,7 +141,7 @@ public function maMethod(NomEntiteRepository $repository)
 
 Continuez à explorer et à pratiquer ces concepts pour renforcer votre compréhension de la logique de Symfony. N'hésitez pas à poser des questions si vous en avez !
 
-## 6. Lecture des Données Provenant de la Base de Données
+### 6. Lecture des Données Provenant de la Base de Données
 
 Pour afficher des données provenant de la base de données, vous devez accéder au repository correspondant à votre entité.
 
@@ -159,7 +161,7 @@ public function afficheDonnees(NomDeVotreEntiteRepository $repository)
 
 Cette méthode récupère toutes les données de votre entité à partir du repository et les passe au template Twig pour affichage.
 
-## 7. Création (CREATE)
+### 7. Création (CREATE)
 
 Pour créer de nouvelles données dans la base de données, vous pouvez utiliser une méthode dans votre contrôleur comme celle-ci :
 
@@ -182,7 +184,7 @@ public function createDonnee(EntityManagerInterface $manager)
 
 Cette méthode crée une nouvelle entité, définit ses propriétés, utilise `persist()` pour dire à Doctrine de suivre cette entité, puis utilise `flush()` pour enregistrer les modifications dans la base de données.
 
-## 8. Recherche (READ)
+### 8. Recherche (READ)
 
 Pour rechercher des données dans la base de données, vous pouvez utiliser une méthode dans votre contrôleur comme celle-ci :
 
@@ -200,7 +202,7 @@ public function rechercheDonnee(NomDeVotreEntiteRepository $repository)
 
 Cette méthode utilise le repository de l'entité pour rechercher une entité par son identifiant, puis passe cette entité au template Twig pour affichage.
 
-## 9. Mise à Jour (UPDATE)
+### 9. Mise à Jour (UPDATE)
 
 Pour mettre à jour des données dans la base de données, vous pouvez utiliser une méthode dans votre contrôleur comme celle-ci :
 
@@ -220,7 +222,7 @@ public function updateDonnee(NomDeVotreEntite $entite, EntityManagerInterface $m
 
 Cette méthode prend en paramètre une entité à mettre à jour, modifie une propriété de cette entité, puis utilise `EntityManagerInterface` pour mettre à jour la base de données.
 
-## 10. Suppression (DELETE)
+### 10. Suppression (DELETE)
 
 Pour supprimer des données de la base de données, vous aurez besoin de `EntityManagerInterface`, vous pouvez utiliser une méthode dans votre contrôleur comme celle-ci :
 
@@ -238,7 +240,7 @@ public function deleteDonnee(NomDeVotreEntite $entite, EntityManagerInterface $m
 
 Cette méthode prend en paramètre une entité à supprimer, puis utilise `EntityManagerInterface` pour la supprimer de la base de données.
 
-## 11. Assets (CSS, JS, Images)
+### 11. Assets (CSS, JS, Images)
 
 Pour inclure des fichiers CSS, JS ou des images dans votre projet Symfony, placez-les dans le répertoire `public/` à la racine de votre projet.
 

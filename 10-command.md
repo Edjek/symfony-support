@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Commandes : Créer des commandes personnalisées
+# 🚀 [Symfony](https://symfony.com/) | Commandes : Créer des commandes personnalisées
 
 <br>
 
@@ -8,20 +8,22 @@
 
 <br>
 
+Par **Rachid EDJEKOUANE ⭐️**
+
 > Ce guide vous explique comment créer vos propres commandes Symfony pour automatiser des tâches récurrentes et améliorer votre flux de travail.
 
 ## Sommaire
 
--   [Introduction](#introduction)
--   [Commandes Symfony](#commandes-symfony-1)
+-   [1. Introduction](#1-introduction)
+-   [2. Commandes Symfony](#2-commandes-symfony)
     -   [Explication](#explication)
 -   [Conclusion](#conclusion)
 
-## Introduction
+### 1. Introduction
 
 Symfony est un framework PHP qui vous permet de créer des applications web robustes et évolutives. Il fournit un ensemble de composants et de bibliothèques qui facilitent le développement d'applications web modernes. Ce guide vous explique comment créer vos propres commandes Symfony pour automatiser des tâches récurrentes et améliorer votre flux de travail.
 
-## Commandes Symfony
+### 2. Commandes Symfony
 
 Pour créer une nouvelle commande Symfony, vous devez créer une classe qui étend la classe `Command` de Symfony. Cette classe doit implémenter la méthode `configure()` pour définir le nom et la description de la commande, et la méthode `execute()` pour exécuter la logique de la commande.
 
@@ -31,7 +33,7 @@ Voici un exemple de commande Symfony simple qui affiche un message :
 symfony console make:command app:hello
 ```
 
-### Explication
+#### Explication
 
 Cette commande crée une nouvelle commande Symfony appelée `app:hello`. Elle génère automatiquement une classe `HelloCommand` dans le répertoire `src/Command` de votre application. Cette classe étend la classe `Command` de Symfony et implémente la méthode `configure()` pour définir le nom et la description de la commande, et la méthode `execute()` pour afficher un message.
 
@@ -81,7 +83,7 @@ class HelloCommand extends Command
 }
 ```
 
-## Conclusion
+### Conclusion
 
 Les commandes Symfony sont un moyen puissant d'automatiser des tâches récurrentes et d'améliorer votre flux de travail. En créant vos propres commandes Symfony, vous pouvez personnaliser votre application et gagner du temps lors du développement. N'hésitez pas à explorer les fonctionnalités avancées des commandes Symfony pour tirer le meilleur parti de ce framework.
 

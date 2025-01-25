@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Twig : Générer des pages HTML dynamiques
+# 🚀 [Symfony](https://symfony.com/) | Twig : Générer des pages HTML dynamiques
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > Twig est un moteur de template pour PHP. Il est utilisé pour générer des pages HTML dynamiques à partir de modèles. Symfony utilise Twig par défaut pour les vues.
 
@@ -22,7 +24,7 @@
 -   [app](#app)
 -   [Conclusion](#conclusion)
 
-## Installation
+### Installation
 
 Pour installer Twig, exécutez la commande suivante :
 
@@ -30,7 +32,7 @@ Pour installer Twig, exécutez la commande suivante :
 composer require twig
 ```
 
-## Syntaxe de base
+### Syntaxe de base
 
 Twig utilise des balises pour afficher des variables, des structures de contrôle et des filtres. Voici quelques exemples de syntaxe Twig :
 
@@ -45,9 +47,9 @@ Twig utilise des balises pour afficher des variables, des structures de contrôl
     -   Afficher une variable : `{{ variable }}`
     -   Filtre : `{{ variable|filter }}`
 
-## Utilisation
+### Utilisation
 
-### Variables
+#### Variables
 
 Pour afficher une variable dans un fichier Twig, utilisez la syntaxe `{{ }}`. Par exemple, pour afficher le titre, utilisez :
 
@@ -55,7 +57,7 @@ Pour afficher une variable dans un fichier Twig, utilisez la syntaxe `{{ }}`. Pa
 <h1>{{ title }}</h1>
 ```
 
-### Structures de contrôle
+#### Structures de contrôle
 
 Vous pouvez également utiliser des structures de contrôle comme les boucles `for` et les conditions `if` dans Twig. Voici un exemple de boucle `for` :
 
@@ -77,7 +79,7 @@ Et un exemple de condition `if` :
 {% endif %}
 ```
 
-## Assets (CSS, JS, Images)
+### Assets (CSS, JS, Images)
 
 Pour inclure des fichiers CSS, JS ou des images dans votre projet Symfony, placez-les dans le répertoire `public/` à la racine de votre projet.
 
@@ -91,7 +93,7 @@ Pour inclure un fichier CSS, JS ou une image dans un template Twig, utilisez la 
 
 Assurez-vous que le chemin spécifié dans `asset()` correspond au chemin réel du fichier dans le répertoire `public/`.
 
-## Liens et formulaires
+### Liens et formulaires
 
 Pour les liens cliquables, utilisez la fonction `path()` :
 
@@ -105,7 +107,7 @@ Pour les formulaires, utilisez la fonction `form_start()` :
 {{ form_start(form) }}
 ```
 
-## app
+### app
 
 L'objet `app` vous permet d'accéder à l'application Symfony dans vos modèles Twig. Vous pouvez utiliser `app` pour accéder à des services, des paramètres et d'autres fonctionnalités de Symfony.
 
@@ -137,7 +139,7 @@ Par exemple, pour accéder à un paramètre dans un modèle Twig, utilisez :
 
 Twig offre de nombreuses fonctionnalités pour rendre vos modèles plus dynamiques et interactifs. Consultez la [documentation officielle de Twig](https://twig.symfony.com/doc/3.x/) pour en savoir plus sur ses fonctionnalités et sa syntaxe.
 
-## Conclusion
+### Conclusion
 
 Twig est un moteur de template puissant qui facilite la création de vues dynamiques dans Symfony. En utilisant Twig, vous pouvez générer des pages HTML interactives et attrayantes pour votre application Symfony.
 

@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Formulaires : Créer des formulaires pour vos applications
+# 🚀 [Symfony](https://symfony.com/) | Formulaires : Créer des formulaires pour vos applications
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > Les formulaires sont un élément essentiel de toute application web. Ils permettent aux utilisateurs d'interagir avec l'application en saisissant des données et en soumettant des requêtes. Symfony propose un composant de formulaire puissant qui facilite la création et la gestion de formulaires dans vos applications.
 
@@ -20,11 +22,11 @@
 -   [Validation](#validation)
 -   [Conclusion](#conclusion)
 
-## Introduction
+### Introduction
 
 Les AbstractTypes sont des classes abstraites qui permettent de définir des formulaires. Elles sont utilisées pour définir les champs du formulaire et les options de ce dernier.
 
-## Création d'un AbstractType
+### Création d'un AbstractType
 
 Pour créer un AbstractType, il suffit de créer une classe qui hérite de `AbstractType` et de redéfinir la méthode `buildForm` qui permet de définir les champs du formulaire.
 
@@ -49,7 +51,7 @@ class ArticleType extends AbstractType
 }
 ```
 
-## Options
+### Options
 
 Les options permettent de définir le comportement du formulaire. Par exemple, on peut définir si le formulaire doit être protégé contre les attaques CSRF, si le formulaire doit être affiché en mode horizontal, etc.
 
@@ -116,7 +118,7 @@ Voici une liste des principaux paramètres que l'on peut passer dans le tableau 
 
 Ces options permettent de personnaliser le comportement et l'apparence des champs de formulaire en Symfony, offrant une grande flexibilité dans la création de formulaires.
 
-## Utilisation d'un FormType
+### Utilisation d'un FormType
 
 Pour utiliser un FormType, il suffit de passer son nom à la méthode `createForm`.
 
@@ -149,7 +151,7 @@ class ArticleController extends AbstractController
 }
 ```
 
-## Affichage du formulaire
+### Affichage du formulaire
 
 Pour afficher le formulaire dans une vue Twig, il suffit d'utiliser la fonction `form` avec le formulaire en paramètre.
 
@@ -172,7 +174,7 @@ Twig permet de personnaliser l'affichage du formulaire en utilisant des thèmes.
 {{ form_end(form) }}
 ```
 
-## Configuration du thème
+### Configuration du thème
 
 Après avoir ajouter Bootstrap Css à votre projet, vous pouvez configurer le thème du formulaire pour qu'il utilise Bootstrap ou Tailwind CSS.
 
@@ -183,7 +185,7 @@ twig:
     form_themes: ['bootstrap_5_layout.html.twig']
 ```
 
-## Validation
+### Validation
 
 La validation des données du formulaire se fait automatiquement grâce aux contraintes de validation définies dans les entités.
 
@@ -206,7 +208,7 @@ class Article
 }
 ```
 
-## Conclusion
+### Conclusion
 
 Les AbstractTypes sont des classes abstraites qui permettent de définir des formulaires dans Symfony. Ils permettent de définir les champs du formulaire, les options et la validation des données.
 

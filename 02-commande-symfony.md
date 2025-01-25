@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Commandes de base : Gérer votre application Symfony avec la console
+# 🚀 [Symfony](https://symfony.com/) | Commandes de base : Gérer votre application Symfony avec la console
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > 🚀 **[Symfony](https://symfony.com/)** fourni de nombreuses commandes pour gérer votre application. Nous pouvons les exécuter en utilisant la commande `php bin/console` ou `symfony console`. Voici quelques commandes utiles pour travailler avec Symfony.
 
@@ -27,9 +29,9 @@
 -   [10. Données de Test](#10-données-de-test)
 -   [10. Dashboard d'Administration](#10-dashboard-dadministration)
 
-## 1. Installation de Symfony
+### 1. Installation de Symfony
 
-### 1.1. Avec Symfony CLI
+#### 1.1. Avec Symfony CLI
 
 Créez un nouveau projet avec la dernière version de Symfony en utilisant _Symfony CLI_ :
 
@@ -37,7 +39,7 @@ Créez un nouveau projet avec la dernière version de Symfony en utilisant _Symf
 symfony new my_project_directory --version="7.1.*" --webapp
 ```
 
-### 1.2. Avec Composer
+#### 1.2. Avec Composer
 
 Créez un projet (version LTS, voir symfony.com/releases) en utilisant Composer :
 
@@ -52,9 +54,9 @@ cd my_project_directory
 composer require webapp
 ```
 
-## 2. Serveur Local
+### 2. Serveur Local
 
-### 2.1. Symfony CLI
+#### 2.1. Symfony CLI
 
 Générez un certificat SSL pour le serveur local (à faire une seule fois) :
 
@@ -86,7 +88,7 @@ Arrêtez le serveur local :
 symfony serve:stop
 ```
 
-## 3. .env
+### 3. .env
 
 Modifiez le fichier .env pour configurer la base de données. Voici un exemple pour MySQL :
 
@@ -94,7 +96,7 @@ Modifiez le fichier .env pour configurer la base de données. Voici un exemple p
 DATABASE_URL="mysql://user:password@host:port/database_name"
 ```
 
-## 4. Lister les commandes Symfony
+### 4. Lister les commandes Symfony
 
 Symfony fournir de nombreuses commandes pour gérer votre application.
 Nous pouvons les exécuter en utilisant la commande `php bin/console` ou `symfony console`.
@@ -104,7 +106,7 @@ Pour lister toutes les commandes disponibles, utilisez la commande suivante :
 php bin/console list
 ```
 
-## 5. Commandes Make
+### 5. Commandes Make
 
 Symfony fournit des commandes "make" pour automatiser la création de certaines parties de votre application :
 
@@ -138,7 +140,7 @@ php bin/console make:crud
 php bin/console make:validator
 ```
 
-## 6. Base de Données
+### 6. Base de Données
 
 Symfony propose des commandes pour gérer la base de données :
 
@@ -166,7 +168,7 @@ php bin/console doctrine:migrations:migrate
 php bin/console doctrine:schema:update --force
 ```
 
-## 7. Twig : Template Engine
+### 7. Twig : Template Engine
 
 Configurez Bootstrap ou Tailwind CSS pour les formulaires dans le fichier `config/packages/twig.yaml` :
 
@@ -175,7 +177,7 @@ twig:
     form_themes: ['bootstrap_5_layout.html.twig']
 ```
 
-## 8. Debug
+### 8. Debug
 
 Affichez les routes existantes dans votre application :
 
@@ -196,7 +198,7 @@ Affichez les informations de débogage sur une commande :
 php bin/console help nom_de_la_commande
 ```
 
-## 9. Cache
+### 9. Cache
 
 Videz le cache de l'application :
 
@@ -204,7 +206,7 @@ Videz le cache de l'application :
 php bin/console cache:clear
 ```
 
-## 10. Données de Test
+### 10. Données de Test
 
 Installez le bundle des fixtures et le package Faker pour générer des données de test :
 
@@ -224,7 +226,7 @@ Chargez les fixtures pour insérer les données de test dans la base de données
 php bin/console doctrine:fixtures:load
 ```
 
-## 10. Dashboard d'Administration
+### 10. Dashboard d'Administration
 
 Installez EasyAdminBundle pour générer un tableau de bord d'administration :
 

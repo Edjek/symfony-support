@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Controller : Gestion des Requêtes HTTP
+# 🚀 [Symfony](https://symfony.com/) | Controller : Gestion des Requêtes HTTP
 
 <br>
 
@@ -8,18 +8,20 @@
 
 <br>
 
+Par **Rachid EDJEKOUANE ⭐️**
+
 > Les contrôleurs interprètent les requêtes HTTP effectuées via l'URL et renvoient les informations demandées par l'utilisateur à Twig, qui est la Vue.
 
 ## Sommaire
 
--   [Introduction](#introduction)
--   [Route](#route)
--   [Return](#return)
--   [Variables](#variables)
--   [Route dynamique](#route-dynamique)
--   [ParamConverter](#paramconverter)
+-   [1. Introduction](#1-introduction)
+-   [2. Route](#route)
+-   [3. Return](#return)
+-   [4. Variables](#4-variables)
+-   [5. Route dynamique](#5-route-dynamique)
+-   [6. ParamConverter](#6-paramconverter)
 
-## Introduction
+### 1. Introduction
 
 -   Les contrôleurs sont des classes qui contiennent des méthodes qui correspondent à des routes.
 -   Les contrôleurs sont créés dans le dossier `src/Controller`.
@@ -31,7 +33,7 @@
 php bin/console make:controller NomDuController
 ```
 
-## Route
+### 2. Route
 
 -   Les routes sont définies avec l'annotation `#[Route()]`.
 -   Les routes sont définies avec un chemin et un nom.
@@ -41,7 +43,7 @@ php bin/console make:controller NomDuController
 #[Route("/", name="home_index", methods: ["GET"])]
 ```
 
-## Return
+### 3. Return
 
 -   Les méthodes des contrôleurs doivent contenir un `return` de type `Response`, soit `redirectToRoute()` soit `render()` ou `json()`.
 -   Les méthodes des contrôleurs doivent être annotées avec `#[Route()]` pour définir la route.
@@ -55,7 +57,7 @@ public function home()
 }
 ```
 
-## Variables
+### 4. Variables
 
 -   Les variables à utiliser dans les vues doivent être envoyées depuis la méthode rendant la vue.
 -   Les variables à utiliser dans les vues doivent être envoyées dans un tableau associatif en deux parties : le nom de la variable et la valeur de la variable.
@@ -66,7 +68,7 @@ return $this->render('nomd_controller_minuscule/nom_fichier.html.twig', [
 ]);
 ```
 
-## Route dynamique
+### 5. Route dynamique
 
 -   Les routes dynamiques sont définies avec des paramètres dans l'URL.
 -   Les paramètres sont définis dans l'annotation `#[Route()]` avec des accolades `{}`.
@@ -82,7 +84,7 @@ public function article($id)
 }
 ```
 
-## ParamConverter
+### 6. #ParamConverter
 
 -   Le ParamConverter est un mécanisme qui permet de convertir automatiquement un paramètre de route en objet.
 -   Le ParamConverter est activé par défaut dans Symfony pour les `id`.

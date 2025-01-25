@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Security Guide : Authentification et Connexion
+# 🚀 [Symfony](https://symfony.com/) | Security Guide : Authentification et Connexion
 
 <br>
 
@@ -8,29 +8,38 @@
 
 <br>
 
+Par **Rachid EDJEKOUANE ⭐️**
+
 > Ce guide vous explique comment configurer l'authentification et la connexion dans une application Symfony.
 
 ## Sommaire
 
 -   [Introduction](#introduction)
--   [Vérification de la Sécurité](#vérification-de-la-sécurité)
--   [Création d'un Utilisateur](#création-dun-utilisateur)
--   [Configuration du Fichier de Sécurité](#configuration-du-fichier-de-sécurité)
--   [Création d'un Formulaire d'Inscription](#création-dun-formulaire-dinscription)
--   [Création d'un Formulaire de Connexion](#création-dun-formulaire-de-connexion)
--   [Test des Routes de Sécurité](#test-des-routes-de-sécurité)
--   [Ajout de Rôles et de Permissions](#ajout-de-rôles-et-de-permissions)
+-   [1. Vérification de la Sécurité](#1-vérification-de-la-sécurité)
+-   [2. Création d'un Utilisateur](#2-création-dun-utilisateur)
+    -   [Explication](#explication)
+-   [3. Configuration du Fichier de Sécurité](#3-configuration-du-fichier-de-sécurité)
+-   [4. Création d'un Formulaire d'Inscription](#4-création-dun-formulaire-dinscription)
+    -   [Explication](#explication-1)
+-   [5. Création d'un Formulaire de Connexion](#5-création-dun-formulaire-de-connexion)
+    -   [Explication](#explication-2)
+-   [6. Test des Routes de Sécurité](#6-test-des-routes-de-sécurité)
+-   [7. Ajout de Rôles et de Permissions](#7-ajout-de-rôles-et-de-permissions)
     -   [Modification des Permissions](#modification-des-permissions)
--   [Personnalisation des Formulaires et Vues](#personnalisation-des-formulaires-et-vues)
+-   [8. Personnalisation des Formulaires et Vues](#8-personnalisation-des-formulaires-et-vues)
 -   [9. Générer les droits d'accès sur les contrôleurs](#9-générer-les-droits-daccès-sur-les-contrôleurs)
--   [Personnalisation des Messages](#personnalisation-des-messages)
+    -   [Explication](#explication-3)
+-   [10. Personnalisation des Messages](#10-personnalisation-des-messages)
+    -   [Explication](#explication-4)
 -   [Conclusion](#conclusion)
 
-## Introduction
+---
+
+### Introduction
 
 La sécurité est un aspect crucial de toute application web. Symfony fournit un système de sécurité robuste qui vous permet de gérer l'authentification, l'autorisation et la protection contre les attaques CSRF. Ce guide vous explique comment configurer l'authentification et la connexion dans une application Symfony.
 
-## Vérification de la Sécurité
+### 1. Vérification de la Sécurité
 
 Il est important de vérifier régulièrement les vulnérabilités de sécurité dans vos dépendances.
 
@@ -38,7 +47,7 @@ Il est important de vérifier régulièrement les vulnérabilités de sécurité
 symfony check:security
 ```
 
-## Création d'un Utilisateur
+### 2. Création d'un Utilisateur
 
 Créez une entité utilisateur avec Symfony. Cela configurera également le système de sécurité pour gérer les utilisateurs.
 
@@ -46,13 +55,13 @@ Créez une entité utilisateur avec Symfony. Cela configurera également le syst
 symfony console make:user
 ```
 
-Cette commande vous posera des questions pour configurer l'entité utilisateur, comme le nom de la classe et les champs nécessaires (e.g., `email`, `password`). Par défaut, elle créera une classe `User` dans le répertoire `src/Entity`. Cette classe implémentera l'interface `UserInterface` et `PasswordAuthenticatedUserInterface` de Symfony pour gérer l'authentification.
+_Cette commande vous posera des questions pour configurer l'entité utilisateur, comme le nom de la classe et les champs nécessaires (e.g., `email`, `password`). Par défaut, elle créera une classe `User` dans le répertoire `src/Entity`. Cette classe implémentera l'interface `UserInterface` et `PasswordAuthenticatedUserInterface` de Symfony pour gérer l'authentification._
 
-## Configuration du Fichier de Sécurité
+### 3. Configuration du Fichier de Sécurité
 
 Après avoir créé l'utilisateur, configurez le fichier `config/packages/security.yaml` pour définir les pare-feu et les encodages des mots de passe.
 
-## Création d'un Formulaire d'Inscription
+### 4. Création d'un Formulaire d'Inscription
 
 Générez un formulaire d'inscription pour permettre aux utilisateurs de créer un compte.
 
@@ -60,15 +69,10 @@ Générez un formulaire d'inscription pour permettre aux utilisateurs de créer 
 symfony console make:registration-form
 ```
 
-Cette commande crée un formulaire d'inscription, un contrôleur, et met à jour l'entité `User` pour gérer l'inscription. Elle ajoute également une route `/register`.
-Mettre à jour la base de données pour ajouter les champs de l'utilisateur nouvellement créés.
+_Cette commande crée un formulaire d'inscription, un contrôleur, et met à jour l'entité `User` pour gérer l'inscription. Elle ajoute également une route `/register`.
+Mettre à jour la base de données pour ajouter les champs de l'utilisateur nouvellement créés._
 
-```bash
-symfony console make:migration
-symfony console doctrine:migrations:migrate
-```
-
-## Création d'un Formulaire de Connexion
+### 5. Création d'un Formulaire de Connexion
 
 Générez un formulaire de connexion et configurez votre système de sécurité pour utiliser ce formulaire.
 
@@ -76,9 +80,9 @@ Générez un formulaire de connexion et configurez votre système de sécurité 
 symfony console make:security:form-login
 ```
 
-Cette commande crée un contrôleur de connexion et les templates associés, ainsi que les routes nécessaires. Par défaut, elle configurera les routes `/login` et `/logout`.
+_Cette commande crée un contrôleur de connexion et les templates associés, ainsi que les routes nécessaires. Par défaut, elle configurera les routes `/login` et `/logout`._
 
-## Test des Routes de Sécurité
+### 6. Test des Routes de Sécurité
 
 Vérifiez que les routes de connexion, déconnexion et inscription fonctionnent correctement en accédant aux URLs suivantes :
 
@@ -86,22 +90,22 @@ Vérifiez que les routes de connexion, déconnexion et inscription fonctionnent 
 -   **Déconnexion :** `/logout`
 -   **Inscription :** `/register`
 
-## Ajout de Rôles et de Permissions
+### 7. Ajout de Rôles et de Permissions
 
-Pour ajouter des rôles à vos utilisateurs, modifiez l'entité `User` (cela est fait automatiquement lors de la création de l'utilisateur) :
+Pour ajouter des rôles à vos utilisateurs, modifiez l'entité `User` :
 
 ```php
 class User implements UserInterface
 {
     // ...
 
-    #[ORM\Column]
+    #[ORM\Column(type: 'json')]
     private array $roles = [];
 
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantie que chaque utilisateur a au moins un rôle
+        // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
@@ -116,7 +120,7 @@ class User implements UserInterface
 }
 ```
 
-### Modification des Permissions
+#### Modification des Permissions
 
 Mettez à jour `security.yaml` pour ajouter des restrictions basées sur les rôles :
 
@@ -127,19 +131,9 @@ security:
         - { path: ^/profile, roles: ROLE_USER }
 ```
 
-Dans cet exemple, les utilisateurs avec le rôle `ROLE_ADMIN` auront accès à la route `/admin`, tandis que les utilisateurs avec le rôle `ROLE_USER` auront accès à la route `/profile`. Vous pouvez personnaliser les rôles et les permissions selon vos besoins.
-
-## Personnalisation des Formulaires et Vues
+### 8. Personnalisation des Formulaires et Vues
 
 Personnalisez les templates dans le répertoire `templates` pour correspondre à votre design.
-
-```twig
-{% if is_granted('ROLE_ADMIN') %}
-    <a href="{{ path('admin_dashboard') }}">Dashboard</a>
-{% endif %}
-```
-
-Dans un fichier `twig` vous pouvez utiliser la fonction `is_granted` pour vérifier les droits d'accès :
 
 ```twig
 {% extends 'base.html.twig' %}
@@ -155,12 +149,7 @@ Dans un fichier `twig` vous pouvez utiliser la fonction `is_granted` pour vérif
 {% endblock %}
 ```
 
-Dans cet exemple, le template `login.html.twig` affiche un message de bienvenue si l'utilisateur est connecté.
-
-Pour acceder aux informations de l'utilisateur connecté, vous pouvez utiliser `app.user`.
-Vous pouvez personnaliser les vues pour afficher des messages d'erreur, des formulaires de connexion, etc...
-
-## 9. Générer les droits d'accès sur les contrôleurs
+### 9. Générer les droits d'accès sur les contrôleurs
 
 Pour restreindre l'accès à certaines parties de votre application, vous pouvez ajouter des annotations de sécurité aux contrôleurs :
 
@@ -185,7 +174,7 @@ Dans cet exemple, la méthode `dashboard` du contrôleur `AdminController` néce
 -   `#[IsGranted('IS_AUTHENTICATED_REMEMBERED')]`,
 -   `#[IsGranted('IS_AUTHENTICATED_ANONYMOUSLY')]`.
 
-## Personnalisation des Messages
+### 10. Personnalisation des Messages
 
 Personnalisez les messages en ajoutant des traductions dans le fichier `translations/security.fr.yaml` :
 
@@ -195,9 +184,9 @@ You have been logged in: 'Vous êtes connecté.'
 You have been logged out: 'Vous êtes déconnecté.'
 ```
 
-Cela permet de personnaliser les messages affichés lors de la connexion, de la déconnexion et en cas d'erreur d'authentification.
+_Cela permet de personnaliser les messages affichés lors de la connexion, de la déconnexion et en cas d'erreur d'authentification._
 
-## Conclusion
+### Conclusion
 
 En suivant ce guide, vous pouvez configurer un système d'authentification robuste dans votre application Symfony. Assurez-vous de tester chaque étape et de personnaliser les formulaires et les vues selon vos besoins.
 

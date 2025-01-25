@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Environnement de Travail avec Visual Studio Code
+# 🚀 [Symfony](https://symfony.com/) | Environnement de Travail avec Visual Studio Code
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > Afin de travailler efficacement avec 🚀 **[Symfony](https://symfony.com/)**, il est recommandé de configurer votre environnement de travail pour une productivité maximale. Voici quelques outils et extensions utiles pour développer des applications Symfony dans Visual Studio Code.
 
@@ -19,7 +21,7 @@
     -   [3.2. Utilisation de Composer](#32-utilisation-de-composer)
 -   [4. Symfony CLI](#4-symfony-cli)
 
-## 1. Extensions VS Code
+### 1. Extensions VS Code
 
 -   [French Language Pack for Visual Studio Code (Microsoft)](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-fr)
 -   [Prettier - Code formatter (Prettier)](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
@@ -43,17 +45,17 @@ Pour travailler efficacement avec Symfony, il est recommandé d'installer les ex
 -   [Symfony for VSCode (TheNouillet)](https://marketplace.visualstudio.com/items?itemName=TheNouillet.symfony-vscode)
 -   [Twig Language 2 (mblode)](https://marketplace.visualstudio.com/items?itemName=mblode.twig-language-2)
 
-## 2. Paramètres VS Code
+### 2. Paramètres VS Code
 
 -   Editor: Format On Save : true
 -   PHP: Suggest > Basic : false
 -   Emmet: Include Languages : { "twig": "html" }
 
-## 3. Composer : Gestionnaire de dépendances PHP
+### 3. Composer : Gestionnaire de dépendances PHP
 
 Composer est un outil essentiel pour gérer les dépendances PHP dans un projet Symfony. Il permet de télécharger et d'installer des bibliothèques tierces facilement.
 
-### 3.1. Installation de Composer
+#### 3.1. Installation de Composer
 
 -   Pour Windows : [Téléchargement de l'Exécutable](https://getcomposer.org/Composer-Setup.exe)
 
@@ -63,7 +65,7 @@ Composer est un outil essentiel pour gérer les dépendances PHP dans un projet 
 sudo apt install composer
 ```
 
-### 3.2. Utilisation de Composer
+#### 3.2. Utilisation de Composer
 
 Composer utilise un fichier `composer.json` pour définir les dépendances du projet. Pour créer un nouveau projet Symfony, utilisez la commande suivante dans le terminal :
 
@@ -81,7 +83,7 @@ composer require symfony/framework-bundle
 
 Composer téléchargera le bundle ainsi que toutes ses dépendances et les installera dans le projet.
 
-## 4. Symfony CLI
+### 4. Symfony CLI
 
 Symfony CLI est un outil de développement pratique qui permet de créer, exécuter et gérer des applications Symfony directement depuis votre terminal.
 

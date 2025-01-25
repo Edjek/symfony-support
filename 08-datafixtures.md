@@ -1,4 +1,4 @@
-# 🚀 **[Symfony](https://symfony.com/)** | Fixtures : Peupler la base de données avec des données de test
+# 🚀 [Symfony](https://symfony.com/) | Fixtures : Peupler la base de données avec des données de test
 
 <br>
 
@@ -7,6 +7,8 @@
 </center>
 
 <br>
+
+Par **Rachid EDJEKOUANE ⭐️**
 
 > Pour peupler la base de données avec des données de test, Symfony propose un outil appelé les fixtures. Les fixtures sont des classes PHP qui permettent de générer des données de test pour les entités de l'application.
 
@@ -22,11 +24,11 @@
 -   [Faker](#faker)
 -   [Conclusion](#conclusion)
 
-## Introduction
+### Introduction
 
 Les fixtures sont des données de test qui sont utilisées pour peupler la base de données. Elles sont généralement utilisées pour les tests unitaires et fonctionnels.
 
-## Installation
+### Installation
 
 Pour installer les fixtures, il faut ajouter le package `doctrine/doctrine-fixtures-bundle` à votre projet :
 
@@ -34,7 +36,7 @@ Pour installer les fixtures, il faut ajouter le package `doctrine/doctrine-fixtu
 composer require --dev orm-fixtures
 ```
 
-## Création des fixtures
+### Création des fixtures
 
 Pour créer des fixtures, il faut créer une classe qui hérite de `Fixture` et qui implémente la méthode `load` :
 
@@ -62,7 +64,7 @@ class AppFixtures extends Fixture
 }
 ```
 
-## Références : Passage de données entre fixtures
+### Références : Passage de données entre fixtures
 
 Pour passer des données entre les fixtures, il faut utiliser la méthode `addReference` pour créer une référence et `getReference` pour récupérer une référence à une fixture existante :
 
@@ -108,7 +110,7 @@ class AutreFixtures extends Fixture
 
 Cette méthode est utile pour créer des relations entre les entités. Par exemple, pour créer un produit avec une catégorie :
 
-## Dependencies : Dépendances entre fixtures
+### Dependencies : Dépendances entre fixtures
 
 Pour définir des dépendances entre les fixtures, il faut implémenter `DependentFixtureInterface` et créer la méthode `getDependencies` :
 
@@ -137,7 +139,7 @@ class AutreFixtures extends Fixture implements DependentFixtureInterface
 }
 ```
 
-## Ordre d'exécution : Ordre d'exécution des fixtures
+### Ordre d'exécution : Ordre d'exécution des fixtures
 
 Par défaut, les fixtures sont exécutées dans l'ordre alphabétique.
 
@@ -166,7 +168,7 @@ class AutreFixtures extends Fixture implements OrderedFixtureInterface
 }
 ```
 
-## Chargement des fixtures
+### Chargement des fixtures
 
 Pour charger les fixtures, il faut exécuter la commande suivante :
 
@@ -186,7 +188,7 @@ Pour éviter la confirmation de la suppression des données existantes, il faut 
 php bin/console doctrine:fixtures:load -n
 ```
 
-## Faker
+### Faker
 
 Faker est une bibliothèque PHP qui permet de générer des données aléatoires. Pour l'utiliser, il faut ajouter le package `fzaninotto/faker` à votre projet :
 
@@ -206,7 +208,7 @@ echo $faker->name;
 
 Pour plus d'informations, consultez la [documentation de Faker](https://fakerphp.org/).
 
-## Conclusion
+### Conclusion
 
 Les fixtures sont un outil essentiel pour peupler la base de données avec des données de test. Elles permettent de tester l'application dans des conditions réelles sans affecter les données existantes.
 
