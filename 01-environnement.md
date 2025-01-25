@@ -21,6 +21,8 @@ Par **Rachid EDJEKOUANE ⭐️**
     -   [3.2. Utilisation de Composer](#32-utilisation-de-composer)
 -   [4. Symfony CLI](#4-symfony-cli)
 
+---
+
 ### 1. Extensions VS Code
 
 -   [French Language Pack for Visual Studio Code (Microsoft)](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-fr)

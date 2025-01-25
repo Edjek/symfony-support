@@ -26,6 +26,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [10. Suppression (DELETE)](#10-suppression-delete)
 -   [11. Assets (CSS, JS, Images)](#11-assets-css-js-images)
 
+---
+
 ### 1. Création d'un Contrôleur et d'une Vue
 
 Pour commencer, créez votre template de base dans `base.html.twig` en incluant la navigation, le block `body`, les liens CSS, les scripts, etc.

@@ -24,6 +24,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [Faker](#faker)
 -   [Conclusion](#conclusion)
 
+---
+
 ### Introduction
 
 Les fixtures sont des données de test qui sont utilisées pour peupler la base de données. Elles sont généralement utilisées pour les tests unitaires et fonctionnels.

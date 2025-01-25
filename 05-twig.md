@@ -24,6 +24,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [app](#app)
 -   [Conclusion](#conclusion)
 
+---
+
 ### Installation
 
 Pour installer Twig, exécutez la commande suivante :

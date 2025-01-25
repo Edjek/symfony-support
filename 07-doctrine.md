@@ -22,6 +22,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [6. Query Builder](#6-query-builder)
 -   [7. Migration](#7-migration)
 
+---
+
 ### 1. Introduction
 
 Doctrine va vous permettre de manipuler des objets PHP comme s'ils étaient des lignes de base de données. Vous n'aurez plus à écrire des requêtes SQL pour récupérer ou modifier des données dans la base de données.

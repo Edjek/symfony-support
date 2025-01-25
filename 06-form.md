@@ -22,6 +22,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [Validation](#validation)
 -   [Conclusion](#conclusion)
 
+---
+
 ### Introduction
 
 Les AbstractTypes sont des classes abstraites qui permettent de définir des formulaires. Elles sont utilisées pour définir les champs du formulaire et les options de ce dernier.

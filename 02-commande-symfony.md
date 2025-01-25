@@ -29,6 +29,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [10. Données de Test](#10-données-de-test)
 -   [10. Dashboard d'Administration](#10-dashboard-dadministration)
 
+---
+
 ### 1. Installation de Symfony
 
 #### 1.1. Avec Symfony CLI

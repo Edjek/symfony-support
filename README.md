@@ -2,6 +2,8 @@
 
 > Durée : 5 jours (35 heures au total)
 
+Par **Rachid EDJEKOUANE ⭐️**
+
 <br>
 
 <center>
@@ -10,9 +12,7 @@
 
 <br>
 
-Par **Rachid EDJEKOUANE ⭐️**
-
-> Objectifs pédagogiques d'une formation de 4 semaines sur Symfony pour développeurs web
+    Objectifs pédagogiques d'une formation de 4 semaines sur Symfony pour développeurs web
 
 ## Sommaire
 

@@ -19,6 +19,8 @@ Par **Rachid EDJEKOUANE ⭐️**
     -   [Explication](#explication)
 -   [Conclusion](#conclusion)
 
+---
+
 ### 1. Introduction
 
 Symfony est un framework PHP qui vous permet de créer des applications web robustes et évolutives. Il fournit un ensemble de composants et de bibliothèques qui facilitent le développement d'applications web modernes. Ce guide vous explique comment créer vos propres commandes Symfony pour automatiser des tâches récurrentes et améliorer votre flux de travail.

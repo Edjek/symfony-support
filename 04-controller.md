@@ -21,6 +21,8 @@ Par **Rachid EDJEKOUANE ⭐️**
 -   [5. Route dynamique](#5-route-dynamique)
 -   [6. ParamConverter](#6-paramconverter)
 
+---
+
 ### 1. Introduction
 
 -   Les contrôleurs sont des classes qui contiennent des méthodes qui correspondent à des routes.
